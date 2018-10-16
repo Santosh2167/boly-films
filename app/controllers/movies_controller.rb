@@ -8,7 +8,7 @@ class MoviesController < ApplicationController
     
   end
 
-  def create
+  def create #done
     # render json: params
     @movie = Movie.new(movie_params)
     @movie.save
@@ -23,11 +23,11 @@ class MoviesController < ApplicationController
     
   end
 
-  def new
+  def new #done
     @movie = Movie.new
   end
 
-  def edit
+  def edit 
     @movie = Movie.find(params[:id])
     
   end
