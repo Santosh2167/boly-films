@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get "movies/:id",to:"movies#show", as: "movie"
   put "movies/:id",to:"movies#update"
   patch "movies/:id",to:"movies#update"
-  delete "movies/id", to:"movies#destroy"
+  delete "movies/id", to:"movies#destroy", as:"delete_movie"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

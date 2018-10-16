@@ -33,7 +33,11 @@ class MoviesController < ApplicationController
   end
 
   def update
-    render jason:params
+    # render json:params
+    @movie = Movie.find(params[:id])
+    @movie.update(movie_params)
+
+    redirect_to @movie
   end
 
   def destroy
