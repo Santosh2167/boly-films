@@ -1,5 +1,4 @@
-<h1>Movies#new</h1>
-<%= form_with model:@movie, local:true do |form|%>
+<%=form_with model:movie, local:true do |form|%>
     <p>
         <%= form.label :title%>
         <%= form.text_field :title%>
@@ -19,11 +18,12 @@
         <%= form.label :release_date%>
         <%= form.text_field :release_date, type: "date"%>
     </p>
+
     <p>
         <%= form.label :image%>
         <%= form.text_field :image%>
     </p>
 
-    <%= form.submit "Save Movie"%>
+    <%= form.submit "Update Movie"%>
 
 <%end%>
